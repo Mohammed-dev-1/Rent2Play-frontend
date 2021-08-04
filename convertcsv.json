@@ -1,0 +1,96 @@
+{
+  "user": [
+    
+  ],
+  "courts": [
+    {
+      "name": "Alytaus sporto ir rekreacijos centro teniso aikštynas",
+      "address": "Birutės g. 5, Alytus",
+      "courtType": "Gruntas",
+      "numberOfCourt": "4",
+      "Type": "Atviras",
+      "price": "4 euros",
+      "sport": "Tennis"
+    },
+    {
+      "name": "Angarinė sporto salė",
+      "address": "Radvilėnų pl. 19, Kaunas",
+      "courtType": "Medis",
+      "numberOfCourt": "2",
+      "Type": "Dengtas",
+      "price": "6 euros",
+      "sport": "Padel"
+    },
+    {
+      "name": "Anykščių KKSC teniso aikštynas",
+      "address": "J. Biliūno g. 81, Anykščiai",
+      "courtType": "Sintetinė žolė",
+      "numberOfCourt": "3",
+      "Type": "Atviras",
+      "price": "18 euros",
+      "sport": "Badminton"
+    },
+    {
+      "name": "Atviras Panevėžio teniso aikštynas",
+      "address": "Parko g. 16, Panevėžys",
+      "courtType": "Sintetinė žolė",
+      "numberOfCourt": "4",
+      "Type": "Atviras",
+      "price": "25 euros",
+      "sport": "Tennis"
+    },
+    {
+      "name": "AURA teniso kortai",
+      "address": "Aukštuolės g. 1-oji 3, Vilniaus raj.",
+      "courtType": "Sintetinė žolė",
+      "numberOfCourt": "1",
+      "Type": "Atviras",
+      "price": "13 euros",
+      "sport": "Padel"
+    },
+    {
+      "name": "Avižienių teniso aikštelė",
+      "address": "Avižieniai, Vilnius",
+      "courtType": "Kilimas",
+      "numberOfCourt": "1",
+      "Type": "Dengtas",
+      "price": "7 euros",
+      "sport": "Tennis"
+    },
+    {
+      "name": "Ąžuolyno sveik. centro teniso aikštynas",
+      "address": "Sporto g. 3, Kaunas",
+      "courtType": "Gruntas",
+      "numberOfCourt": "8",
+      "Type": "Atviras",
+      "price": "9 euros",
+      "sport": "Badminton"
+    },
+    {
+      "name": "BALTICTENNIS.LT gruntiniai kortai",
+      "address": "Telšių g.17, Vilnius",
+      "courtType": "Gruntas",
+      "numberOfCourt": "4",
+      "Type": "Atviras",
+      "price": "17 euros",
+      "sport": "Tennis"
+    },
+    {
+      "name": "BALTICTENNIS.LT uždari kortai",
+      "address": "Telšių g.17, Vilnius",
+      "courtType": "Akrilas",
+      "numberOfCourt": "4",
+      "Type": "Dengtas",
+      "price": "10 euros",
+      "sport": "Padel"
+    },
+    {
+      "name": "Baltupių teniso kortai",
+      "address": "Baltupiai, Vilnius",
+      "courtType": "Asfaltas",
+      "numberOfCourt": "2",
+      "Type": "Atviras",
+      "sport": "Tennis"
+    }
+   ]
+}

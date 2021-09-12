@@ -1,4 +1,4 @@
-import Searching from "../../services/searching/searching.service"
+import Searching from "../../services/Searching/searching.service"
 
 export const searching = {
   namespaced: true,

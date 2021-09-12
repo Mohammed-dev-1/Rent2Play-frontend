@@ -102,25 +102,4 @@ ul {
 li {
   color: #ffffff;
 }
-@media screen and (min-width: 600px) {
-  .footer__content {
-    display: flex;
-    justify-content: space-between;
-  }
-  .footer__contentList {
-    margin-bottom: 4%;
-  }
-  footer {
-    padding: 2% 0 .7em 0;
-  }
-}
-
-@media screen and (max-width: 740px){
-  .footer__icon {
-    padding-top: .7em;
-    padding-bottom: 1.7em;
-    margin-left: -6%;
-    margin-top: 7px;
-  } 
-}
 </style>

@@ -1,0 +1,20 @@
+:root {
+  /* Background color */
+  --bg-main: #222;
+  --bg-nav: #222;
+  --bg-heading: #222;
+
+  /* Text color */
+  --text-200: #222;
+  --text-150: #222;
+  --text-100: #222;
+  --text-50: #222;
+
+  /* Shadows color */
+  --outer-shadow: 0px 0px 10px #222;
+  --inner-shadow: 0px 0px 10px #222;
+  --hover-in-shadow: 0px 0px 10px #222;
+
+  /* Icon color */
+  --first-color: #222;
+}

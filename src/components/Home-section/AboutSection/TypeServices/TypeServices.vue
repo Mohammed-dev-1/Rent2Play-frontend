@@ -58,25 +58,25 @@
             id: 1,
             serviceType: "Find a coach",
             serviceDis: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, enim.',
-            serviceImg: require('@/assets/find_coach.jpg')
+            serviceImg: require('@/assets/images/find_coach.jpg')
           },
           {
             id: 2,
             serviceType: "Find a court",
             serviceDis: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, enim.',
-            serviceImg: require('@/assets/find_court.jpg')
+            serviceImg: require('@/assets/images/find_court.jpg')
           },
           {
             id: 3,
             serviceType: "Find a player",
             serviceDis: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, enim.',
-            serviceImg: require('@/assets/find_player.jpg')
+            serviceImg: require('@/assets/images/find_player.jpg')
           },
           {
             id: 4,
             serviceType: "Shopping equipment",
             serviceDis: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, enim.',
-            serviceImg: require('@/assets/shopping_equipment.jpg')
+            serviceImg: require('@/assets/images/shopping_equipment.jpg')
           }
         ],
         counter: 0

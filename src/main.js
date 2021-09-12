@@ -6,10 +6,18 @@ import store from "./store";
 import upperFirst from 'lodash/upperFirst';
 import camelCase from 'lodash/camelCase';
 import VueToasted from 'vue-toasted';
+import VueApexCharts from 'vue-apexcharts';
+
+import "./assets/styles/GlobalStyle.css";
+import "./assets/styles/VarStyle.css";
+// import "./assets/styles/Responsive.scss";
+
+
+Vue.config.productionTip = false;
 
 const requireComponent = require.context(
   // The relative path of the components folder
-  './components/Home',
+  './components/BaseComponents',
   // Whether or not to look in subfolders
   false,
   // The regular expression used to match base component filenames
@@ -42,31 +50,33 @@ requireComponent.keys().forEach(fileName => {
   )
 })
 
-Vue.config.productionTip = false;
 
 Vue.use(VueToasted, {
   iconPack: 'fontawesome'
 });
 
+Vue.use(VueApexCharts);
+Vue.component('apexchart', VueApexCharts);
+
 new Vue({
   router,
   store,
-  // created() {
-  //   const userString = localStorage.getItem('user')
-  //   if(userString) {
-  //     const userData = JSON.parse(userString)
-  //     this.$store.commit('SET_USER_DATA', userData)
-  //   }
-  //   axios.interceptors.response.use(
-  //     response => response,
-  //     error => {
-  //       if(error.response.status === 401 ) {
-  //         this.$store.dispatch('logout')
-  //       }
-  //       return Promise.reject(error)
-  //     }
-  //   )
-  // },
+  created() {
+    const userString = localStorage.getItem('user')
+    if(userString) {
+      const userData = JSON.parse(userString)
+      this.$store.commit('SET_USER_DATA', userData)
+    }
+    axios.interceptors.response.use(
+      response => response,
+      error => {
+        if(error.response.status === 401 ) {
+          this.$store.dispatch('logout')
+        }
+        return Promise.reject(error)
+      }
+    )
+  },
   vuetify,
   render: (h) => h(App),
 }).$mount("#app");

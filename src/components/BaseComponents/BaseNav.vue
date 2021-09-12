@@ -40,7 +40,7 @@
             Sign up
           </router-link>
         </li>
-        <li v-if="loggedIn" class="nav__item" :class="{ item__active: isActive }" @click="logout">
+        <li v-if="loggedIn" class="nav__item nav__link" :class="{ item__active: isActive }" @click="logout">
           Log out
         </li>
       </ul>
@@ -170,61 +170,5 @@ nav {
 .nav__bg__active .open__button {
   color: #2f4353;
   font-weight: bold;
-}
-@media screen and (min-width: 700px) {
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 80%;
-    margin: 20px auto;
-  }
-  .top__nav {
-    width: 40%;
-  }
-  .nav__list {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 60%;
-    position: static;
-    background: none; 
-    border: none;
-  }
-  .nav__item {
-    opacity: 1;
-    padding: 0 10px;
-  }
-  .nav__link {
-    opacity: 1;
-    color: #ffffff;
-  }
-  .sign-btn {
-    border-radius: 20px;
-    background: #ffffff;
-    padding: 6px 15px;
-  }
-  .sign-btn .nav__link {
-    color: #2f4353;
-  }
-  .open__button {
-    display: none;
-  }
-  .nav__bg__active .nav__link {
-    color: #2f4353;
-  }
-  .nav__bg__active .sign-btn {
-    background: #2f4353;
-  }
-  .nav__bg__active .sign-btn .nav__link {
-    color: #ffffff;
-  }
-  .nav__bg__active nav {
-    margin: 0 auto;
-  }
-}
-@media screen and (min-width: 900px) {
-  .nav__list { width: 50%; }
-  .top__nav { width: 50%; }
 }
 </style>

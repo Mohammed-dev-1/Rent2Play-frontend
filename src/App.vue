@@ -1,29 +1,30 @@
 <template>
   <v-app class="app">
-    <router-view></router-view>
+    <BaseNav />
+
+    <transition name="view">
+      <router-view></router-view>
+    </transition>
+
+    <BaseAlertMessage />
   </v-app>
 </template>
 
 <script>
-
-export default {
-  name: "App",
-  data() {
-    return {
-      
-    }
+  export default {
+    name: "App",
   }
-};
 </script>
 
 <style>
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  text-decoration: none;
+.view-enter-active,
+.view-leave-active {
+  transition: all 0.5s ease;
 }
-ul {
-  list-style: none;
+
+.view-enter-from,
+.view-leave-to {
+  opacity: 0;
+  transform: scale(0.9);
 }
 </style>

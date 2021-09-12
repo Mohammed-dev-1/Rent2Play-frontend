@@ -10,11 +10,6 @@ import Find_court from "@/pages/Home/Find_court";
 import Sign_up from "@/pages/auth/Sign_up";
 import Login from "@/pages/auth/Login";
 
-// User porfile and dashboard import
-import UserProfile from "@/pages/User_profile/UserProfile";
-import UserBooking from "@/pages/User_profile/UserBooking";
-import DashBoard from "@/pages/User_profile/DashBoard";
-
 Vue.use(Router);
 
 
@@ -47,28 +42,6 @@ const router = new Router({
       component: Find_court,
       props: true
     },
-    {
-      path: "/user_profile",
-      name: "user_profile",
-      component: UserProfile,
-      meta: { requiresAuth: true },
-      children: [
-        {
-          // DashBoard will be rendered in the second <router-view>
-          // when /your-sidebar-url/a is matched
-          path: 'dashboard',
-          name: 'dashboard',
-          component: DashBoard
-        },
-        {
-          // user booking will be rendered in the second <router-view>
-          // when /your-sidebar-url/a is matched
-          path: 'user_booking',
-          name: 'user_booking',
-          component: UserBooking
-        },
-      ]
-    }
   ],
 });
 

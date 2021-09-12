@@ -61,13 +61,13 @@ export default {
       colortoggle: false,
       items: [
         {
-          src: require("@/assets/court_1.jpg")
+          src: require("@/assets/images/court_1.jpg")
         },
         {
-          src: require("@/assets/court_2.jpg")
+          src: require("@/assets/images/court_2.jpg")
         },
         {
-          src: require("@/assets/court_3.jpg")
+          src: require("@/assets/images/court_3.jpg")
         }
       ]
     }

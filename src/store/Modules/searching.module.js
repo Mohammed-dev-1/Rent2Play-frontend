@@ -4,7 +4,9 @@ export const searching = {
   namespaced: true,
   state: {
     courts: [],
-    bookingMessage: ''
+    bookingMessage: '',
+    messageStatus: false,
+    messageContains: false,
   },
   getters: {
 
@@ -19,7 +21,12 @@ export const searching = {
       localStorage.setItem("courts", JSON.stringify(state.courts));
     },
     BOOKING(state, bookingMessage) {
+      state.messageStatus = true;
       state.bookingMessage = bookingMessage;
+
+      if(state.bookingMessage == "The booking was created succesfully")
+        state.messageContains = true;
+              
       console.log(bookingMessage);
     }
   },
@@ -43,7 +50,9 @@ export const searching = {
         .then(
           res => {
             // console.log(res);
-            commit('BOOKING', res);
+            let message = res.response?.data.message;
+            
+            commit('BOOKING', message);
             return Promise.resolve(res);
           },
           err => {

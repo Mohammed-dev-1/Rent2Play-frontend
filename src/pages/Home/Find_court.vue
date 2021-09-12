@@ -37,7 +37,6 @@ export default {
   },
   data() {
     return {
-      mobileShow: false,
       court_data_finding: JSON.parse(localStorage.getItem('courts')),
       court_data_booking: this.$store.state.court_booking
     }

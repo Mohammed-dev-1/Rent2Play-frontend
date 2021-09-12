@@ -1,7 +1,5 @@
 <template>
   <section>
-    <Nav />
-
     <div class="login">
       <v-form
         class="form__login"
@@ -49,15 +47,13 @@
 </template>
 
 <script>
-import Nav from "@/components/Home/Nav";
 import FooterTow from "@/components/Finding/FooterTow";
 
 export default {
   name: "Login",
   components: {
     FooterTow,
-    Nav
-},
+  },
   data() {
     return {
       email: "",
@@ -67,59 +63,27 @@ export default {
       LoginIsWorking: false,
       type: "password",
       TextError: "",
-      reg: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/
     };
   },
   methods: {
     login() {
-      if(!this.email && !this.password) {
-        this.ShowError = true;
-        this.TextError = "Please complete the fields !"
-      } else
-      if(!this.email) {
-        this.ShowError = true;
-        this.TextError = "Please enter your email"
-      } else
-      if(!this.reg.test(this.email)){
-        this.ShowError = true;
-        this.TextError = "Email is not required !"
-      } else 
-      if(!this.password) {
-        this.ShowError = true;
-        this.TextError = "Please enter your password !"
-      } else
-      if(this.password.length < 9) {
-        this.ShowError = true;
-        this.TextError = "Your password is less than 9 !"
-      } else
-      if(this.password.length > 18) {
-        this.ShowError = true;
-        this.TextError = "Your password is greater than 18 characters !"
-      } 
-      else{
-        this.ShowError = true;
-        this.LoginIsWorking = true
-
-        this.TextError = "Everything is working please wait !"
-        this.$store
-          .dispatch("userAuth/logIn", {
-            email: this.email,
-            password: this.password
-          })
-          .then(
-            res => {
-              if(res) this.$router.push({ name: 'Home' });
-            },
-            err => {
-              if(err) {
-                this.LoginIsWorking = false;
-                this.ShowError = true;
-                this.TextError = 'User not found!';
-                // this.TextError = (err.response.data && err.response) || err.message || err.toString();            
-              }
-            }
-          )
-      }
+      this.ShowError = true;
+      this.LoginIsWorking = true;
+      this.$store
+        .dispatch("userAuth/logIn", {
+          email: this.email,
+          password: this.password
+        })
+        .then(
+          res => {
+            if(res) this.$router.push({ name: 'Home' });
+          },
+          err => {
+            this.LoginIsWorking = false;
+            this.ShowError = true;
+            this.TextError = err.response?.data.message || "Something is wrong";            
+          }
+        );
     },
     toggleType() {
       this.type = this.type === "password" ? "text" : 'password'
@@ -255,16 +219,6 @@ section {
     font-weight: 300;
     color: #2f4353;
     font-size: 1rem !important;
-}
-}
-
-@media screen and (min-width: 748px) {
-  section {
-    .login {
-      .form__login {
-        width: 50%;
-      }
-    }
   }
 }
 </style>
